@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createNewGame, findGames } from "../controllers/game.controller";
+import { createNewGame, findGames, updateGame } from "../controllers/game.controller";
 
 
 const router = Router();
@@ -7,5 +7,7 @@ const router = Router();
 router.get("/games", findGames);
 
 router.post("/games", createNewGame);
+
+router.put("/games", updateGame);
 
 export default router;
